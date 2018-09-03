@@ -2,9 +2,9 @@
 var Enemy = function() {
   // Current row can be between 1 and 3
   this.current_row = 1 + parseInt(Math.random() * 100) % 3;
-  this.y = (this.current_row * 83) - 20;
+  this.y = (this.current_row * TILE_HEIGHT) - 20;
 
-  this.x = -101;
+  this.x = -TILE_WIDTH;
   // Min speed is 80, max speed is 260
   this.x_speed = 80 + parseInt(Math.random() * 180);
 

@@ -3,8 +3,8 @@ var Gem = function() {
     this.current_row = 1 + parseInt(Math.random() * 100) % 3
     this.current_column = parseInt(Math.random() * 100) % 5
 
-    this.x = this.current_column * 101;
-    this.y = (this.current_row * 83) - 20;
+    this.x = this.current_column * TILE_WIDTH;
+    this.y = (this.current_row * TILE_HEIGHT) - 20;
 
     const powerup_types = ["slow_motion", "1up", "clear_enemies"];
 

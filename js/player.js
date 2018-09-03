@@ -32,8 +32,8 @@ Player.prototype.update = function() {
   }
 
   // Set our coordinates
-  this.x = this.current_column * 101;
-  this.y = (this.current_row * 83) - 20;
+  this.x = this.current_column * TILE_WIDTH;
+  this.y = (this.current_row * TILE_HEIGHT) - 20;
 }
 
 // Move our character
@@ -64,7 +64,7 @@ Player.prototype.intersects = function (enemy) {
   // First, work out the exact coordinates of our player model and enemy model
   // (we only need the X axis since we are only worried about our current row)
   let player_sides = {left: this.x + 18, right: this.x + 18 + 66};
-  let enemy_sides = {left: enemy.x, right: enemy.x + 101};
+  let enemy_sides = {left: enemy.x, right: enemy.x + TILE_WIDTH};
 
   // If the left side of the player is BETWEEN the enemies right and left sides then it intersects
   // OR

@@ -3,6 +3,8 @@ allEnemies = [new Enemy(), new Enemy()];
 gems = [];
 player = new Player();
 game = new Game();
+const TILE_WIDTH = 101;
+const TILE_HEIGHT = 83;
 
 // Create new enemies every second if needed (max 6 onscreen at any time)
 setInterval(function() {
