@@ -2,7 +2,7 @@ var Player = function() {
   // Player starts in the middle of the bottom row
   this.current_column = 2;
   this.current_row = 5;
-
+ 
   this.x = 0;
   this.y = 0;
   this.waiting_for_reset = false;
@@ -20,11 +20,14 @@ Player.prototype.update = function() {
     // Mark that we are waiting to be reset to the bottom row
     this.waiting_for_reset = true;
 
+    
+    self = this;
+
     // Give the player 200ms to appreciate the fact that he reached the water
     setTimeout(function() {
       game.points++;
-      player.reset();
-      player.waiting_for_reset = false;
+      self.reset();
+      self.waiting_for_reset = false;
     }, 200);
   }
 
